@@ -1,0 +1,36 @@
+{{define "eco_bundle_dogshelter/dogs_adopted-single.html" }}
+
+{{ template "header-top.html" . }}
+
+{{ $table := .table }} {{ $schema := .schema }}
+
+<title>{{ .record.title }}</title>
+<meta name="description" content="{{ .record.description }}"> {{ template "header-bottom.html" . }}
+
+<section class="section">
+    <div class="container">
+        <div class="heading">
+            <h2 class="subtitle">
+                <a href="/site/{{ $schema }}/{{ $table }}">Back to {{ .table }}</a>
+            </h2>
+        </div>
+        <hr />
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">{{ .record.name }}</h1>
+            <img src="/images/eco_bundle_dogshelter/{{ .record.image }}?width=300" />
+            <h2 class="subtitle">
+                {{ .record.description }}
+            </h2>
+        </div>
+    </div>
+</section>
+
+
+{{ template "footer.html" . }}
+
+{{ end }}

@@ -1,0 +1,43 @@
+<script>
+
+    // Custom settings are available on all elements by including the behavior EcoCustom.Settings
+    // and then referencing the name of the setting directly
+
+    var EcoCustom = EcoCustom || {};
+
+    EcoCustom.Settings = {
+
+        properties: {
+
+            adminPanelTitle: {
+                type: String,
+                value: "The Animal Shelter"
+            },
+            apiRoot: {
+                type: String,
+                value: "http://46.101.29.133:3000/api"
+            },
+            publicApiRoot: {
+                //This one is for non-authed requests, i.e. images from the server and login
+                type: String,
+                value: "http://46.101.29.133:3000"
+            },
+            sideMenu: {
+                //A simple array of links
+                type: Array,
+                value: [
+                    {
+                        "table": "dogs_available",
+                        "view": "dogsAvailableList",
+                        "title": "Dogs Available"
+                    }, {
+                        "table": "dogs_adopted",
+                        "view": "dogsAdoptedList",
+                        "title": "Dogs Adopted"
+                    }
+                ]
+            }
+        }
+
+    }
+</script>

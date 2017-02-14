@@ -1,0 +1,34 @@
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="/" class="nav-item">
+                <img src="/public/eco_bundle_dogshelter/images/logo.png" />
+            THE DOG SHELTER</a>
+        </div>
+
+        <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+        <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+        <span id="main-nav-toggle" class="nav-toggle" onclick="toggleMainNav()">
+<span></span>
+<span></span>
+<span></span>
+</span>
+
+<!-- This "nav-menu" is hidden on mobile -->
+<!-- Add the modifier "is-active" to display it on mobile -->
+<div id="main-nav" class="nav-right nav-menu">
+    
+    <span class="nav-item">
+      <a href="/site/eco-bundle-dogshelter/dogs-available"><strong>All</strong></a>
+    </span>
+
+    {{ template "menu.html" .site.BuildMenu `` }}
+
+    <span class="nav-item">
+      <a href="/site/eco-bundle-dogshelter/dogs-adopted"><strong>Previous Residents</strong></a>
+    </span>
+</div>
+</nav>

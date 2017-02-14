@@ -1,0 +1,39 @@
+<script>
+    //Custom actions are user definable functions that can be run for individual records with line actions
+    //or for multiple records at once with a bulk action.  In both cases, use the 'actionFunction' property
+    //to reference the function name here.
+    //For simplicty, bulk actions work by by simply looping over the selected records and performing the action
+    //line by line.  In this way, both types of function are interoperable.
+    //The function is passed the details of the item and the element as context.
+    //Access the 'actionRequest' AJAX element on the context to make calls to the API
+
+    var EcoCustom = EcoCustom || {};
+
+    EcoCustom.Actions = {
+
+        adoptMe: function (item, context) {
+            var adoptedByDetails = prompt("Enter details of adopting family:")
+            if (adoptedByDetails != null) {
+                context.$.actionRequest.method = "PATCH";
+                context.$.actionRequest.url = context.apiRoot + "/" + context.table + "/" + item.id;
+                context.$.actionRequest.body = {
+                    "adopted_by": adoptedByDetails
+                };
+                context.$.actionRequest.generateRequest()
+            }
+
+        },
+
+        // AddMeToAnotherList: function (item, context) {
+        //     context.$.actionRequest.method = "POST";
+        //     context.$.actionRequest.url = context.apiRoot + "/table_view";
+        //     context.$.actionRequest.body = {
+        //         "thisRecord": context.restrictRecord,
+        //         "thisLine": item.id,
+        //         "someOtherDetail": 1
+        //     };
+        //     context.$.actionRequest.generateRequest()
+        // }
+
+    }
+</script>
