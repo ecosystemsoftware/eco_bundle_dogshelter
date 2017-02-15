@@ -7,11 +7,12 @@
     //The function is passed the details of the item and the element as context.
     //Access the 'actionRequest' AJAX element on the context to make calls to the API
 
+    //Create the EcoCustom namespace just in case no bundle has already created it
     var EcoCustom = EcoCustom || {};
+    EcoCustom.Actions = EcoCustom.Actions || {};
 
-    EcoCustom.Actions = {
-
-        adoptMe: function (item, context) {
+    //Augment the actions in the namespace - don't overwrite
+    EcoCustom.Actions.adoptMe = function (item, context) {
             var adoptedByDetails = prompt("Enter details of adopting family:")
             if (adoptedByDetails != null) {
                 context.$.actionRequest.method = "PATCH";
@@ -21,19 +22,7 @@
                 };
                 context.$.actionRequest.generateRequest()
             }
-
-        },
-
-        // AddMeToAnotherList: function (item, context) {
-        //     context.$.actionRequest.method = "POST";
-        //     context.$.actionRequest.url = context.apiRoot + "/table_view";
-        //     context.$.actionRequest.body = {
-        //         "thisRecord": context.restrictRecord,
-        //         "thisLine": item.id,
-        //         "someOtherDetail": 1
-        //     };
-        //     context.$.actionRequest.generateRequest()
-        // }
-
     }
+
+
 </script>

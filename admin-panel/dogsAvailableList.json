@@ -32,6 +32,7 @@
             {
                 "name": "name",
                 "label": "Name",
+                "linkSchema": "eco_bundle_dogshelter",
                 "linkTable": "dogs_available",
                 "linkTo": "id",
                 "linkView": "dogDrilldown"
