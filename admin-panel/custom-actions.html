@@ -16,7 +16,7 @@
             var adoptedByDetails = prompt("Enter details of adopting family:")
             if (adoptedByDetails != null) {
                 context.$.actionRequest.method = "PATCH";
-                context.$.actionRequest.url = context.apiRoot + "/" + context.table + "/" + item.id;
+                context.$.actionRequest.url = context.apiRoot + "/" + context.schema + "/" + context.table + "/" + item.id;
                 context.$.actionRequest.body = {
                     "adopted_by": adoptedByDetails
                 };
