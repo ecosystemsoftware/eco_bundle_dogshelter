@@ -1,0 +1,7 @@
+{{ define "eco_bundle_dogshelter/menu.html" }}
+
+{{ range . }}
+    <a href="/category/eco_bundle_dogshelter/dogs-available/{{ .ID }}" class="nav-item">{{ .Title }}</a> 
+{{ end }}
+
+{{ end }}

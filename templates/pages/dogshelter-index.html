@@ -1,4 +1,6 @@
-{{ template "header-top.html" . }} {{ template "header-bottom.html" . }} {{ $table := .table }}
+{{ define "eco_bundle_dogshelter/index.html" }}
+
+{{ template "eco_bundle_dogshelter/header-top.html" . }} {{ template "eco_bundle_dogshelter/header-bottom.html" . }} {{ $table := .table }}
 
 <section class="section">
     <div class="container">
@@ -11,4 +13,6 @@
     </div>
 </section>
 
-{{ template "footer.html" . }}
+{{ template "eco_bundle_dogshelter/footer.html" . }}
+
+{{ end }}

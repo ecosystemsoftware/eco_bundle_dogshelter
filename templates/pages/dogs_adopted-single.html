@@ -1,11 +1,11 @@
 {{define "eco_bundle_dogshelter/dogs_adopted-single.html" }}
 
-{{ template "header-top.html" . }}
+{{ template "eco_bundle_dogshelter/header-top.html" . }}
 
 {{ $table := .table }} {{ $schema := .schema }}
 
 <title>{{ .record.title }}</title>
-<meta name="description" content="{{ .record.description }}"> {{ template "header-bottom.html" . }}
+<meta name="description" content="{{ .record.description }}"> {{ template "eco_bundle_dogshelter/header-bottom.html" . }}
 
 <section class="section">
     <div class="container">
@@ -31,6 +31,6 @@
 </section>
 
 
-{{ template "footer.html" . }}
+{{ template "eco_bundle_dogshelter/footer.html" . }}
 
 {{ end }}

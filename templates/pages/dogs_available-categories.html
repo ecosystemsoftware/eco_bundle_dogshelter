@@ -1,4 +1,5 @@
-{{ template "header-top.html" . }} {{ template "header-bottom.html" . }} {{ $table := .table }}
+{{ define "eco_bundle_dogshelter/dogs_available-categories.html" }}
+{{ template "eco_bundle_dogshelter/header-top.html" . }} {{ template "eco_bundle_dogshelter/header-bottom.html" . }} {{ $table := .table }}{{ $schema := .schema }}
 
 <section class="section">
     <div class="container">
@@ -11,12 +12,12 @@
         </div>
         <hr />
         <div class="columns is-multiline">
-           {{ range .records }}
+            {{ range .records }}
             <div class="column is-one-quarter">
                 <!--<img src="http://placehold.it/350x150">-->
                 <!--If you had your image at .image, then you'd have this:-->
-                <img src="/img/{{ .image }}?width=300" />
-                <h1 class="title is-4"><a href="/site/{{ $table }}/{{ .slug }}">{{ .name }}</a></h1>
+                <img src="/images/eco_bundle_dogshelter/{{ .image }}?width=300" />
+                <h1 class="title is-4"><a href="/site/{{ $schema }}/{{ $table }}/{{ .slug }}">{{ .name }}</a></h1>
                 <!--<button class="button is-primary" onClick="addToList('{{ .title }}')">Add to List</button>-->
             </div>
             {{ end }}
@@ -24,4 +25,4 @@
     </div>
 </section>
 
-{{ template "footer.html" . }}
+{{ template "eco_bundle_dogshelter/footer.html" . }} {{ end }}

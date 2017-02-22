@@ -1,10 +1,12 @@
+{{ define "eco_bundle_dogshelter/header-bottom.html" }}
+
 </head>
 
 <body>
 
     <nav class="nav">
         <div class="nav-left">
-            <a href="/" class="nav-item">
+            <a href="/site/eco_bundle_dogshelter" class="nav-item">
                 <img src="/public/eco_bundle_dogshelter/images/logo.png" />
             THE DOG SHELTER</a>
         </div>
@@ -25,10 +27,12 @@
       <a href="/site/eco-bundle-dogshelter/dogs-available"><strong>All</strong></a>
     </span>
 
-    {{ template "menu.html" .site.BuildMenu `` }}
+    {{ template "eco_bundle_dogshelter/menu.html" .site.BuildMenu `` `eco_bundle_dogshelter` }}
 
     <span class="nav-item">
       <a href="/site/eco-bundle-dogshelter/dogs-adopted"><strong>Previous Residents</strong></a>
     </span>
 </div>
 </nav>
+
+{{ end }}
