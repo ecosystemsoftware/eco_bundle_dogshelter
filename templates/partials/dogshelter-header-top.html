@@ -36,9 +36,14 @@
     <link rel="stylesheet" href="/public/eco_bundle_dogshelter/css/bulma.css">
     <link rel="stylesheet" href="/public/eco_bundle_dogshelter/css/main.css">
 
-    <!--Your scripts-->
+    <!--Scripts-->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/public/eco_bundle_dogshelter/js/eco.js"></script>
-    <script src="/public/eco_bundle_dogshelter/js/main.js"></script>
+    <!--Include ecosystem.js-->
+    <!--ecosystem.js is a small js file dynically created by the EcoSystem server.
+    It dynamically includes the api location taken from the config.json as namespaced variable
+    and includes some JQuery extension function to wrap calls to the EcoSystem API,
+    making AJAX easier-->
+    <script src="/ecosystem.js"></script>
+
 
     {{ end }}

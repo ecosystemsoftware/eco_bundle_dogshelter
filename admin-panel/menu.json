@@ -1,0 +1,17 @@
+{
+    "title": "Dog Shelter Demo",
+    "items": [
+        {
+            "schema": "eco_bundle_dogshelter",
+            "table": "dogs_available",
+            "view": "dogsAvailableList",
+            "title": "Dogs Available"
+        },
+        {
+            "schema": "eco_bundle_dogshelter",
+            "table": "dogs_adopted",
+            "view": "dogsAdoptedList",
+            "title": "Dogs Adopted"
+        }
+    ]
+}
