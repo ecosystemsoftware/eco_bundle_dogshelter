@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/ecosystemsoftware/ecosystem-website/master/themes/ecosystem/static/images/eco-logo.png)
+![](https://raw.githubusercontent.com/ecosystemsoftware/ecosystem-website/master/themes/ecosystem/static/images/ecosystem-logo.png)
 
 # EcoSystem Bundle: Dog Shelter Demo
 
