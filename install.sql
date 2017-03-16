@@ -19,13 +19,9 @@ CREATE VIEW dogs_available AS
     FROM dogs
     WHERE dogs.adopted_by IS NULL;
 
-GRANT SELECT on dogs_available to web;
-
 CREATE VIEW dogs_adopted AS
     SELECT *,
     dogs.name || '-' || dogs.id as slug,
     dogs.name || ', a ' || dogs.breed || ' was adopted at The Animal Shelter' as page_title
     FROM dogs
     WHERE dogs.adopted_by IS NOT NULL;
-
-GRANT SELECT on dogs_adopted to web;
