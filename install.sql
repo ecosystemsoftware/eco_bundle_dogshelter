@@ -19,9 +19,13 @@ CREATE VIEW dogs_available AS
     FROM dogs
     WHERE dogs.adopted_by IS NULL;
 
+    GRANT SELECT on TABLE dogs_available TO anon;
+
 CREATE VIEW dogs_adopted AS
     SELECT *,
     dogs.name || '-' || dogs.id as slug,
     dogs.name || ', a ' || dogs.breed || ' was adopted at The Animal Shelter' as page_title
     FROM dogs
     WHERE dogs.adopted_by IS NOT NULL;
+
+    GRANT SELECT on TABLE dogs_adopted TO anon;
